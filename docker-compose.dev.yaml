@@ -1,0 +1,41 @@
+services:
+  # client:
+  #   container_name: debug_dev_client
+  #   build: ./client
+  #   image: debug_client
+  #   ports: 
+  #     - 8080:8080
+  #   working_dir: /code
+  #   volumes:
+  #     - type: bind
+  #       source: ./client
+  #       target: /code
+  #   command: [ "http-server" ]
+  api:
+    container_name: debug_dev_api
+    ports: 
+      - 3000:3000
+    environment: 
+      - PGUSER=neifors
+      - PGHOST=db
+      - PGPASSWORD=neiforspass
+      - PGDATABASE=michaeljackson
+      - PGPORT=5432
+      - NODE_ENV=development
+    depends_on:
+      - db
+    command: bash -c "npm install && npm start"
+
+  db:
+    container_name: debug_dev_db
+    volumes:
+      - "dbdata:/var/lib/postgresql/data"
+    environment: 
+      - POSTGRES_DB=michaeljackson
+      - POSTGRES_USER=neifors
+      - POSTGRES_PASSWORD=neiforspass
+volumes:
+  dbdata:
+networks: 
+  default:
+    name: debug_api

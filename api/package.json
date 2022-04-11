@@ -1,0 +1,33 @@
+{
+  "name": "music-app-server",
+  "version": "1.0.0",
+  "description": "Michael Jackson API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --legacy-watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neifors/music-app-server.git"
+  },
+  "keywords": [
+    "michael",
+    "jackson",
+    "api",
+    "server"
+  ],
+  "author": "Isabel Repetto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neifors/music-app-server/issues"
+  },
+  "homepage": "https://github.com/neifors/music-app-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "sql-template-strings": "^2.2.2"
+  }
+}
