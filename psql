@@ -1,0 +1,14 @@
+=== DATABASE_URL
+Plan:                  Hobby-dev
+Status:                Available
+Connections:           0/20
+PG Version:            14.2
+Created:               2022-04-11 12:22 UTC
+Data Size:             8.5 MB/1.00 GB (In compliance)
+Tables:                0
+Rows:                  0/10000 (In compliance)
+Fork/Follow:           Unsupported
+Rollback:              Unsupported
+Continuous Protection: Off
+Add-on:                postgresql-contoured-02677
+

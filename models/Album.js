@@ -1,4 +1,4 @@
-const SQL = require('sql-template-strings');
+// const SQL = require('sql-template-strings');
 const db = require('../db_config/initdb.js')
 
 class Album{
@@ -11,7 +11,7 @@ class Album{
    static get all(){
       return new Promise(async (res, rej) => {
          try {
-            let result = await db.run(SQL`SELECT * FROM albums;`);
+            let result = await db.query('SELECT * FROM albums;');
             let albums = result.rows.map(r => new Album(r))
             res(albums)
          } catch (err) {
