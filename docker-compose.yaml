@@ -2,7 +2,7 @@ version: '3'
 services:
   api:
     image: 'node:latest'
-    working_dir: /server
+    working_dir: /api
     ports:
       - 3000:3000
     environment: 
@@ -16,8 +16,8 @@ services:
       - db
     volumes:
       - type: bind
-        source: ./api
-        target: /server
+        source: ./
+        target: /api
     command: bash -c "npm install && npm start"
   db:
     image: 'postgres:11.1'
