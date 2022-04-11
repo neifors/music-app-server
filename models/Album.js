@@ -4,8 +4,11 @@ const db = require('../db_config/initdb.js')
 class Album{
    constructor(data){
       this.id = data.id
-      this.name = data.name
+      this.img = data.img
+      this.title = data.title
       this.year = data.year
+      this.songs = data.songs
+
    }
        
    static get all(){
